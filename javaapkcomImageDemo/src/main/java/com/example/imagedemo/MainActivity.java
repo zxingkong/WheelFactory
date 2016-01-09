@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends Activity implements OnClickListener{
 	
@@ -28,6 +29,8 @@ public class MainActivity extends Activity implements OnClickListener{
 		mCropHelper=new CropHelper(this, OSUtils.getSdCardDirectory()+"/head.png");
 		mDialog=new ChooseDialog(this, mCropHelper);
 		headImage.setOnClickListener(this);
+
+		TextView textView = new TextView(this);
 	}
 	@Override
 	public void onClick(View arg0) {
